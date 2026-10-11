@@ -11,7 +11,7 @@ const WEB_ROOT = path.resolve(__dirname, "../../web/public");
 
 const store = createStore({ file: DATA_FILE, seed: true });
 const server = http.createServer(createApp({ store, webRoot: WEB_ROOT }));
-
+const OPENROUTER_KEY=111111
 server.listen(PORT, () => {
   console.log(`TaskBoard running at http://localhost:${PORT}`);
 });
