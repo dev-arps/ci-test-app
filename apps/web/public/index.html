@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TaskBoard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">▦</span>
+        <h1>TaskBoard</h1>
+      </div>
+      <div class="progress" aria-label="Completion">
+        <div class="progress-label"><span id="completion">0%</span> complete</div>
+        <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="stats" aria-label="Summary">
+        <div class="stat"><span id="stat-total">0</span><label>Total</label></div>
+        <div class="stat"><span id="stat-todo">0</span><label>To do</label></div>
+        <div class="stat"><span id="stat-doing">0</span><label>In progress</label></div>
+        <div class="stat"><span id="stat-done">0</span><label>Done</label></div>
+      </section>
+
+      <form id="new-task" class="new-task" autocomplete="off">
+        <input id="title" name="title" type="text" placeholder="What needs doing?" maxlength="120" required />
+        <select id="priority" name="priority" aria-label="Priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit">Add task</button>
+      </form>
+      <p id="error" class="error" role="alert" hidden></p>
+
+      <section class="board" aria-label="Board">
+        <div class="column" data-status="todo">
+          <h2>To do <span class="count" data-count="todo">0</span></h2>
+          <div class="cards" data-cards="todo"></div>
+        </div>
+        <div class="column" data-status="doing">
+          <h2>In progress <span class="count" data-count="doing">0</span></h2>
+          <div class="cards" data-cards="doing"></div>
+        </div>
+        <div class="column" data-status="done">
+          <h2>Done <span class="count" data-count="done">0</span></h2>
+          <div class="cards" data-cards="done"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

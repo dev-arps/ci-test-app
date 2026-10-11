@@ -1,7 +1,18 @@
 {
-  "name": "ci-test-app",
+  "name": "taskboard",
   "version": "1.0.0",
+  "private": true,
+  "description": "TaskBoard: a small kanban monorepo (shared lib, REST API, web UI)",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "test": "node test.js"
+    "start": "npm start --workspace @taskboard/api",
+    "dev": "node --watch apps/api/src/server.js",
+    "test": "npm test --workspaces --if-present"
   }
 }

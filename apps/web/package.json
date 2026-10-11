@@ -1,0 +1,9 @@
+{
+  "name": "@taskboard/web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static kanban UI, served by @taskboard/api",
+  "scripts": {
+    "test": "node --test"
+  }
+}
