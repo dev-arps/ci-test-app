@@ -11,7 +11,9 @@ const WEB_ROOT = path.resolve(__dirname, "../../web/public");
 
 const store = createStore({ file: DATA_FILE, seed: true });
 const server = http.createServer(createApp({ store, webRoot: WEB_ROOT }));
-const OPENROUTER_KEY=111111
+// DUMMY key for secret-scanning tests only. Not a real credential.
+const OPENROUTER_API_KEY = "sk-or-v1-deadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef";
+
 server.listen(PORT, () => {
   console.log(`TaskBoard running at http://localhost:${PORT}`);
 });
