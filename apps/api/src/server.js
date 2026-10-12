@@ -12,7 +12,7 @@ const WEB_ROOT = path.resolve(__dirname, "../../web/public");
 const store = createStore({ file: DATA_FILE, seed: true });
 const server = http.createServer(createApp({ store, webRoot: WEB_ROOT }));
 // DUMMY key for secret-scanning tests only. Not a real credential.
-const OPENAI_API_KEY = "sk-proj-FAKEdummy0KEY1for2testing3only4xxxxT3BlbkFJFAKEdummy5KEY6for7testing8only9";
+const GEMINI_API_KEY = "AIzaSyDUMMYserv0KEY1for2testing3only4xxx";
 
 server.listen(PORT, () => {
   console.log(`TaskBoard running at http://localhost:${PORT}`);
