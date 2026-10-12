@@ -3,8 +3,5 @@ data/
 *.log
 .DS_Store
 
-# Added by the agentic CI/CD pipeline: never commit secrets
-apps/api/.env
 
-# Added by the agentic CI/CD pipeline: never commit secrets
-.env
+
