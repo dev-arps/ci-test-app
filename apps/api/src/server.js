@@ -11,8 +11,7 @@ const WEB_ROOT = path.resolve(__dirname, "../../web/public");
 
 const store = createStore({ file: DATA_FILE, seed: true });
 const server = http.createServer(createApp({ store, webRoot: WEB_ROOT }));
-// DUMMY key for secret-scanning tests only. Not a real credential.
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY_2;
+
 
 server.listen(PORT, () => {
   console.log(`TaskBoard running at http://localhost:${PORT}`);
