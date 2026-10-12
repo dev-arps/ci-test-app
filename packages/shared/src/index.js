@@ -1,7 +1,7 @@
 "use strict";
 
 // DUMMY key for secret-scanning tests only. Not a real credential.
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_API_KEY = "AIzaSyDUMMYshared0KEY1for2testing3only4xxx";
 
 const STATUSES = ["todo", "doing", "done"];
 const PRIORITIES = ["low", "medium", "high"];
