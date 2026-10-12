@@ -41,7 +41,7 @@ test("computeStats counts by status and priority and rounds completion", () => {
     { status: "done", priority: "high" },
     { status: "done", priority: "high" },
   ]);
-  assert.equal(stats.total, 3);
+  assert.equal(stats.total,999);
   assert.deepEqual(stats.byStatus, { todo: 1, doing: 0, done: 2 });
   assert.equal(stats.byPriority.high, 2);
   assert.equal(stats.completionRate, 67);
