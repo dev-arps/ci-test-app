@@ -1,7 +1,7 @@
 "use strict";
 
 // DUMMY key for secret-scanning tests only. Not a real credential.
-const OPENAI_API_KEY = "sk-proj-DUMMYweb0KEY1for2testing3only4xxxxxT3BlbkFJDUMMYweb0KEY5for6testing7only8";
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 const STATUSES = ["todo", "doing", "done"];
 const NEXT = { todo: "doing", doing: "done" };
