@@ -1,3 +1,3 @@
 
-    const OPENAI_API_KEY = "sk-DUMMYdb0KEY1for2testing3only4xxxxxxxx";
+    const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
