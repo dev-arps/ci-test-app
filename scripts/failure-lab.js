@@ -117,10 +117,13 @@ test("lab: sync with the notifications service", async () => {
   flaky: {
     category: "flaky_test",
     severity: "low",
-    what: "fails about half the time; re-run the same commit until it also passes",
+    what: "fails on the first attempt and passes on re-run of the same commit",
     change: testFile("flaky", `${HEADER}
+// Deterministic flakiness: attempt 1 of a workflow run fails, any re-run passes.
+// GitHub Actions sets GITHUB_RUN_ATTEMPT; "Re-run failed jobs" increments it.
 test("lab: flaky intermittent failure", () => {
-  assert.ok(Math.random() > 0.5, "flaky: intermittent failure, passed on retry elsewhere");
+  const attempt = Number(process.env.GITHUB_RUN_ATTEMPT || "1");
+  assert.ok(attempt > 1, "flaky: intermittent failure on attempt " + attempt + ", passed on retry elsewhere");
 });`),
   },
 };
