@@ -42,6 +42,12 @@ const SCENARIOS = {
     what: "the API requires a package that does not exist (Cannot find module)",
     change: { kind: "replace", file: API_APP, from: '"use strict";\n', to: '"use strict";\n\nrequire("todo-date-helper-v2");\n' },
   },
+  "dependency-pin": {
+    category: "dependency_error",
+    severity: "medium",
+    what: "a dependency is re-pinned to a version that does not exist (npm ci: No matching version found)",
+    change: { kind: "replace", file: "apps/api/package.json", from: '"@taskboard/shared": "*"', to: '"@taskboard/shared": "^99.0.0"' },
+  },
   syntax: {
     category: "syntax_error",
     severity: "high",
