@@ -1,7 +1,5 @@
 "use strict";
 
-require("todo-date-helper-v2");
-
 const fs = require("node:fs");
 const path = require("node:path");
 const { validateTaskInput, computeStats, sortTasks } = require("@taskboard/shared");
