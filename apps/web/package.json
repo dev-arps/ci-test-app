@@ -4,6 +4,6 @@
   "private": true,
   "description": "Static kanban UI, served by @taskboard/api",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test --test-reporter=spec --test-reporter-destination=stdout --test-reporter=junit --test-reporter-destination=junit-web.xml"
   }
 }
