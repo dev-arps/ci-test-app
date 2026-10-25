@@ -41,3 +41,5 @@ npm run dev        # API with auto-restart on change
 ## CI
 
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs `npm ci` and `npm test` on Node 20 and 22 for every push and pull request.
+
+<!-- docs touch-up -->
