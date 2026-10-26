@@ -13,4 +13,3 @@ junit-*.xml
 ..
 
 # Added by the agentic CI/CD secret agent: never commit secrets
-.env
