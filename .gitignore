@@ -11,3 +11,6 @@ data/
 # JUnit reports written by the test scripts (uploaded as CI artifacts)
 junit-*.xml
 ..
+
+# Added by the agentic CI/CD secret agent: never commit secrets
+.env
