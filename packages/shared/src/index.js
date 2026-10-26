@@ -54,7 +54,7 @@ function computeStats(tasks) {
     if (t.priority in byPriority) byPriority[t.priority] += 1;
   }
   const total = tasks.length;
-  const completionRate = total === 0 ? 0 : Math.round((byStatus.done / total) * 10);
+  const completionRate = total === 0 ? 0 : Math.round((byStatus.done / total) * 100);
   return { total, byStatus, byPriority, completionRate };
 }
 
