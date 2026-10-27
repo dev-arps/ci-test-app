@@ -20,8 +20,7 @@ const { execFileSync } = require("node:child_process");
 const ROOT = path.resolve(__dirname, "..");
 const SHARED_SRC = "packages/shared/src/index.js";
 const API_APP = "apps/api/src/app.js";
-const AWS_API-KEY='sk-2hsdehfioefh';
-const OPENAI_API_KEY='sk-yyeuueen03340';
+
 
 const testFile = (name, body) => ({
   kind: "add",
