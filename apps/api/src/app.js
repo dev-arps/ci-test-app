@@ -7,7 +7,7 @@ const { validateTaskInput, computeStats, sortTasks } = require("@taskboard/share
 // Test credentials for secret scanning verification
 
 const AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE";
-const AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
+const AWS_SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY;
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
