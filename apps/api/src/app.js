@@ -4,6 +4,9 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { validateTaskInput, computeStats, sortTasks } = require("@taskboard/shared");
 
+
+const OPENAI_API_KEY = "sk-proj-test1234567890abcdefghijklmnopqrstuvwxyz";
+
 const MIME = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
