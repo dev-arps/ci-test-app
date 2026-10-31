@@ -5,7 +5,7 @@ const path = require("node:path");
 const { validateTaskInput, computeStats, sortTasks } = require("@taskboard/shared");
 
 
-const OPENAI_API_KEY = "sk-proj-test1234567890abcdefghijklmnopqrstuvwxyz";
+const DATABASE_URL = "postgresql://admin:password123@db.example.com:5432/testdb";
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
