@@ -4,8 +4,10 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { validateTaskInput, computeStats, sortTasks } = require("@taskboard/shared");
 
+// Test credentials for secret scanning verification
 
-const DATABASE_URL = "postgresql://admin:password123@db.example.com:5432/testdb";
+const AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE";
+const AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
